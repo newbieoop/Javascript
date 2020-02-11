@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="func()">按钮</button>
+		<div id="box">
+			我是个盒子
+		</div>
+		
+		<script type="text/javascript">
+			var jsdiv = document.getElementById('box')
+			console.log(jsdiv.innerHTML)
+			console.log(jsdiv.innerText)
+			console.log(jsdiv.outerHTML)
+			
+			jsdiv.innerHTML = '<h1>good</h1>'
+		
+		
+		</script>
+	</body>
+</html>

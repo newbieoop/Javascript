@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link  rel="stylesheet" type="text/css" href="test.css"/>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button onclick="changecolor()">变色</button>
+		<script type="text/javascript">
+			var jsDiv = document.getElementById('box')
+			
+			function changecolor(){
+				var c = window.getComputedStyle(jsDiv,null).backgroundColor
+				console.log(c)
+			
+			}
+		
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

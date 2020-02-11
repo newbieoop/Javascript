@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="func()">点我试试！</button>
+		<button onclick="func1()">点击有惊喜！</button>
+		<button onclick="func2()">点击删除！</button>
+		<button onclick="func3()">点击增加！</button>
+		<input type="text" id="in" placeholder="请留下你的大名！" my="我的" />
+		
+		<script type="text/javascript">
+			var jsinput = document.getElementById('in')
+			console.log(jsinput.placeholder)
+			console.log(jsinput.getAttribute('my'))
+			
+			function func(){
+				jsinput.placeholder = 'i am king of code'
+			}
+			function func1(){
+				jsinput.setAttribute('my','你的')
+				console.log(jsinput)
+			}
+			function func2(){
+				jsinput.removeAttribute('my')
+				console.log(jsinput)
+			}
+			function func3(){
+				jsinput.setAttribute('width','500px')
+				console.log(jsinput)
+			}
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>
