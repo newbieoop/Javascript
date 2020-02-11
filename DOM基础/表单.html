@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			window.onload = function()
+			{
+				var oTab = document.getElementById('tab1');
+				var oldColor = '';
+			// alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+				//alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+				for(var i = 0;i < oTab.tBodies[0].rows.length;i++)
+				{
+					    oTab.tBodies[0].rows[i].onmouseover = function()
+						{
+							oldColor = this.style.background;
+							this.style.background = 'green';
+						};  
+						 oTab.tBodies[0].rows[i].onmouseout = function()
+						{
+							this.style.background = oldColor;
+						};
+						if(i%2){
+							oTab.tBodies[0].rows[i].style.background = 'red';
+						}
+						else{
+							oTab.tBodies[0].rows[i].style.background = 'yellow';
+						}
+				}
+			};
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<table border="1" width="500" id="tab1">
+			<thead>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>jack</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>wjm</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>lyb</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>jackchen</td>
+					<td>56</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>zxw</td>
+					<td>30</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

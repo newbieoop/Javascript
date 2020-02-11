@@ -1,0 +1,57 @@
+<!-- 
+[abc] 查找方括号之间的任意字符。
+[0-9] 查找从0至9的数字。
+(x|y) 查找任何以|分隔的选项。
+
+\d 查找数字
+\s 查找空白字符
+\b 匹配单词边界
+\uxxxx 查找以十六进制数xxxx规定的unicode字符
+
+n+ 匹配任何包含至少一个n的字符串。
+n* 匹配任何包含零个或多个n的字符串。
+n? 匹配任何包含零个或一个n的字符串。
+ 
+ RegExp对象是一个预定义了属性和方法的正则表达式对象。
+ 使用test()
+ test()方法是一个正则表达式方法，用于检测一个字符串是否匹配某个模式，如果
+ 字符串中含有匹配的文本，则返回true,否则返回false。
+ 
+ 使用exec()方法 用于检索字符串中的正则表达式的匹配。该函数返回一个数组，其中存放匹配的结果，如果未找到匹配，返回null;
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="func()">点我</button>
+		<p id="demo"></p>
+		<script type="text/javascript">
+			
+			//search()方法使用字符串
+		function func(){
+			var str = 'visit runoob!';
+			var n = str.search('runoob!');
+			document.getElementById('demo').innerHTML = n;
+		}
+			 
+			 
+			 //replace()方法使用正则表达式 修饰符i:执行对大小写不敏感的匹配
+			 //修饰符g：执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）
+			 //修饰符m: 执行多行匹配
+		function func1(){
+			var str1 = document.getElementById('demo1').innerHTML;
+			var txt = str1.replace(/microsoft/i,'runoob');
+			document.getElementById('demo1').innerHTML = txt;
+		}	
+	
+		</script>
+		<p id="demo1">visit microsoft!</p>
+		<button onclick="func1()">按钮</button>
+	</body>
+</html>

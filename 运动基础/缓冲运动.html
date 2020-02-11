@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left: 0px;
+				top: 50px;
+			}
+		</style>
+		<script>
+			function startMove(){
+				
+				var oDiv = document.getElementById('div1');
+				setInterval(function(){
+					
+					var speed = (300 - oDiv.offsetLeft)/10;
+					//向上取整
+					// speed = Math.ceil(speed);
+					speed=speed>0?Math.ceil(speed):Math.floor(speed);	
+					oDiv.style.left = oDiv.offsetLeft + speed +'px';
+				},30);
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始运动" onclick="startMove()" />
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>
