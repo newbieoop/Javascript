@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="func1()">按钮1</button>
+		<button onclick="func2()">按钮2</button>
+		<script type="text/javascript">
+			var time
+			//间歇定时器
+			time = window.setInterval(function(){
+				console.log('i am  a good boy!')
+			},2000)
+			
+			function func1(){
+				//清除定时器
+				window.clearInterval(time)
+			}
+			function func2(){
+		    time = window.setInterval(function(){
+					console.log('i am  a good boy!')
+				},2000)
+				
+			}
+		</script>
+	</body>
+</html>
